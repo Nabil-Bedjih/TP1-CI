@@ -1,8 +1,8 @@
 package fr.epsi;
 public class Main {
     public static void main(String[] args) {
-        Character mage = new Character("Gandalf", "Mage");
-        Character archer = new Character("Legolas", "Archer");
+        GameCharacter mage = new GameCharacter("Gandalf", "Mage");
+        GameCharacter archer = new GameCharacter("Legolas", "Archer");
 
         System.out.println(mage);
         System.out.println(archer);
