@@ -1,36 +1,30 @@
 pipeline {
     agent any
-
     stages {
+        stage('Checkout SCM') {
+            steps {
+                git 'https://votre-dépôt-git.git'
+            }
+        }
         stage('Build') {
             steps {
-                echo 'Building the project...'
                 sh 'mvn clean install'
             }
         }
         stage('Test') {
             steps {
-                echo 'Running tests...'
                 sh 'mvn test'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying the project...'
+                echo 'Deploying the application...'
             }
         }
     }
-
     post {
         always {
-            echo 'Cleaning up...'
-            sh 'mvn clean'
-        }
-        success {
-            echo 'Pipeline succeeded!'
-        }
-        failure {
-            echo 'Pipeline failed.'
+            junit '**/target/surefire-reports/*.xml'
         }
     }
 }
