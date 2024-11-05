@@ -14,7 +14,7 @@ public class Main {
         mage.completeQuest(easyQuest);
         archer.completeQuest(hardQuest);
 
-        System.out.println("Après les quêtes : ");
+        System.out.println("Après les quêtesx : ");
         System.out.println(mage);
         System.out.println(archer);
     }
