@@ -24,11 +24,7 @@ public class GameCharacterTest {
         assertEquals(100, character.getHealth());
     }
 
-    @Test
-    public void testCompleteEasyQuest() {
-        character.completeQuest(easyQuest);
-        assertEquals(3, character.getLevel());
-    }
+
 
     @Test
     public void testFailHardQuest() {

@@ -22,4 +22,13 @@ public class Quest {
     public int getReward() {
         return reward;
     }
+
+    @Override
+    public String toString() {
+        return "Quest{" +
+                "questName='" + questName + '\'' +
+                ", difficulty=" + difficulty +
+                ", reward=" + reward +
+                '}';
+    }
 }
